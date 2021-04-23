@@ -23,7 +23,7 @@ class RoundedButton extends StatelessWidget {
       ),
       // ignore: deprecated_member_use
       child: FlatButton(
-        onPressed: () {},
+        onPressed: onPress,
         child: Text(
           buttonName,
           style: kBodyText.copyWith(fontWeight: FontWeight.bold),

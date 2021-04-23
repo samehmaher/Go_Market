@@ -174,7 +174,6 @@ class _CreateNewAccountState extends State<CreateNewAccount> {
                                 RoundedButton(
                                   buttonName: 'Register',
                                   onPress: () async {
-                                    if (password == rePassword) {
                                       if (_formKey.currentState.validate()) {
                                         var connectivityResult =
                                             await (Connectivity()
@@ -227,17 +226,7 @@ class _CreateNewAccountState extends State<CreateNewAccount> {
                                           }
                                         }
                                       }
-                                    }else{
-                                      // ignore: deprecated_member_use
-                                      Scaffold.of(context).showSnackBar(
-                                        SnackBar(
-                                          content: Text(
-                                              'password Not Matched'),
-                                          backgroundColor: Colors.red,
-                                          duration: Duration(seconds: 3),
-                                        ),
-                                      );
-                                    }
+
                                   },
                                 ),
                                 SizedBox(
